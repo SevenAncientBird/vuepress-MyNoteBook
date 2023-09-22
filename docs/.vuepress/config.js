@@ -13,70 +13,51 @@ module.exports = {
     dest:'./ROOT',
     port:8080,
     head: [],
-    plugins:[],
+    plugins:[
+        require('./plugins.js'),
+    ],
     themeConfig:{
+        logo:'../assets/img/logo.png',
          // 添加导航栏
-        nav:[
-            {text:'主页',link:'/'},
-            {text:'首页',link:'/guide/'},
-            {text:'生活',link:'/life-ms/'},
-            {
-                text:'学习',
-                items:[
-                    {text:'英语',link:'/study-ms/english/english01'},
-                    {text:'数学',link:'/study-ms/math/math01'},
-                ]
-        
-            },
-
-        ],
+        nav:require("./nav.js"),
         // 为以下路由添加左侧边栏
         sidebar:{
-            '/life-ms/':[
+            '/vp/vuepress/': [
                 {
-                    title:'生活测试',
-                    collapsable:false,
-                    children:[
-                        {
-                            title:'测试页面1',path:'/life-ms/life01'
-                        },
-                        {
-                            title:'测试页面1',path:'/life-ms/life02'
-                        },
-                        {
-                            title:'测试页面1',path:'/life-ms/life03'
-                        },
-                    ]
-
-                },
-            ],
-            '/study-ms/english/': [
-                {
-                    title: '英语',
+                    title: 'vue-press学习',
                     collapsable: false,
                     children: [
-                        { title: '第一节', path: '/study-ms/english/english01' },
-                        { title: '第二节', path: '/study-ms/english/english02' },
-                        { title: '第三节', path: '/study-ms/english/english03' },
+                        { 
+                          title: 'Markdown练习', 
+                          path:'/vp/vuepress/markdown.md'
+                        },
                     ]
                 }
             ],
-            '/study-ms/math/': [
-                {
-                    title: '数学',
-                    collapsable: false,
-                    children: [
-                        { title: '第一节', path: '/study-ms/math/math01' },
-                        { title: '第二节', path: '/study-ms/math/math02' },
-                        { title: '第三节', path: '/study-ms/math/math03' },
-                    ]
-                }
-            ],
+           
         },
-        sidebarDepth:2,//左侧导航显示的层级
-        lastUpdated:'Last Updated'
+        sidebarDepth:3,//左侧导航显示的层级
+        lastUpdated:'Last Updated',
 
+        // 内置搜索栏配置,默认true开启,调整默认搜索框显示的搜索结果数量
+        search:true,
+        searchMaxSuggestions:19,
 
+        // 默认值是 true 。设置为 false 来禁用所有页面的 下一篇 链接
+        nextLinks: false,
+        // 默认值是 true 。设置为 false 来禁用所有页面的 上一篇 链接
+        prevLinks: false,
 
+        /**
+         * ---
+         *  prev: ./some-other-page
+         *  next: false
+         *  ---
+         * */ 
+
+         smoothScroll: true,//你可以通过 themeConfig.smoothScroll 选项来启用页面滚动效果。
+    },
+    markdown:{
+        lineNumbers:true
     }
 }
