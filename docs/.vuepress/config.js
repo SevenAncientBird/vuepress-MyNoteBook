@@ -17,7 +17,7 @@ module.exports = {
         require('./plugins.js'),
     ],
     themeConfig:{
-        logo:'../assets/img/logo.png',
+        logo:'',
          // 添加导航栏
         nav:require("./nav.js"),
         // 为以下路由添加左侧边栏
@@ -34,6 +34,20 @@ module.exports = {
                     ]
                 }
             ],
+            '/elementUi/dateTimePicker/':[
+                {
+                    title:'dateTimePicker时间选择器',
+                    collapsable:false,
+                    children:[
+                        {
+                            title:'自定义时间修改',
+                            path:'/elementUi/dateTimePicker/value-format.md',
+                    
+                        },
+                 
+                    ]
+                }
+            ]
            
         },
         sidebarDepth:3,//左侧导航显示的层级
