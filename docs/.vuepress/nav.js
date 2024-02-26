@@ -2,27 +2,43 @@
 module.exports = [
         {text:'首页',link:'/guide/'},
         {
-            text:'vuepress练习',
-            items:[
-                    {
-                        text:'markdown练习',
-                        link: '/vp/vuepress/markdown/'
-                    },
-            ]
-        
-        },
-        {
-            text:'elementUI',
+            text:'学习内容',
             items:[
                 {
-                    text:'element学习首页',
-                    link:'/elementUi/elementMain.md'
+                    text:'vuepress练习',
+                    items:[
+                            {
+                                text:'markdown练习',
+                                link: '/vp/vuepress/markdown/'
+                            },
+                    ]
+                
                 },
                 {
-                    text:'date-Time-Picker时间选择器',
-                    link:'/elementUi/dateTimePicker/value-format.md'
+                    text:'elementUI',
+                    items:[
+                        {
+                            text:'element学习首页',
+                            link:'/elementUi/elementMain.md'
+                        },
+                        {
+                            text:'date-Time-Picker时间选择器',
+                            link:'/elementUi/dateTimePicker/value-format.md'
+                        }
+                    ]
+                },
+                {
+                    text:'git',
+                    items:[
+                        {
+                            text:'git操作大全',
+                            link:'/git/index.md'
+                        }
+                    ]
                 }
             ]
-        }
+        },
+ 
+
 
     ];
