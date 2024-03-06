@@ -7,5 +7,5 @@
 # <center>首页</center>
 
 <center>
-    <button> 点击牛魔测试更新 </button>
+    <button> 点击牛魔 </button>
 </center>
